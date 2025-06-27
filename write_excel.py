@@ -5,4 +5,4 @@ wb = load_workbook("logbook.xlsx")
 ws = wb.active
 ws.append([datetime.now().strftime('%Y-%m-%d %H:%M:%S'),"ログ記録"])
 wb.save("logbook.xlsx")
-print("ログを記録しました")
+print("ログ記録しました")
