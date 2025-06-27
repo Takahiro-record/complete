@@ -1,19 +1,24 @@
 from openpyxl import Workbook
 from datetime import datetime
 
-#実行日の日付を取得
-today = datetime.now().strftime("%Y-%m-%d")
+#現在の日付と時刻を取得
+now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-#出力ファイル名を動的に決定!
-filename = f"output_{today}.xlsx"
+#データ(ログ)を用意
+log_data = [
+	["タイムスタンプ","処理内容"],		#<=ヘッダー
+	[now,"ログ出力成功!"]			#<=1件目のデータ
+]
 
+# Excelファイル作成
 wb = Workbook()
 ws = wb.active
-ws["A1"] = f"作成日：{today}"
-ws["B1"] = "日付入りExcelファイルだよ！"
-wb.save(filename)
 
-print(f"{filename}を保存しました！")
-import os
-print("保存先:", os.getcwd())
-print("ファイル一覧:", os.listdir())
+#行ごとに書き込み
+for row in log_data:
+    ws.append(row)
+
+# 保存ファイル名
+filename = f"log_{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.xlsx"
+wb.save(filename)
+print(f"{filename}を保存しました")
