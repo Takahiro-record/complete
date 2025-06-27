@@ -1,12 +1,13 @@
 import subprocess
 from datetime import datetime
 
-msg = f"ログ自動更新({datetime.now().strftime('%Y-%m-%d %H:%M:%S')})"
+#日時付きメッセージを生成
+now = datetime.now().strftime("%Y-%m-%d %H:%M")
+msg = f"ログ自動更新({now})"
 
-def git_commit(msg):
-    subprocess.run(['git','add','.'])
-    subprocess.run(['git','commit','-m',msg])
-    subprocess.run(['git','push'])
-    print("自動コミット完了")
+subprocess.run(['git','add','.'],check=True)
+subprocess.run(['git','commit','-m',msg],check=True)
+subprocess.run(['git','push'],check=True)
 
-git_commit("kurumi.py修正")
+print("Git自動Push完了")
+print(f"コミットメッセージ:{msg}")
