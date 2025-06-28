@@ -1,10 +1,8 @@
-from openpyxl import load_workbook
-from datetime import datetime
+from openpyxl import Workbook
 
-wb = load_workbook("logbook.xlsx")
+wb = Workbook()
 ws = wb.active
-now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-ws.append([now,"作業ログを記録しました"])
-
-wb.save("logbook.xlsx")
-print("ログを記録しました")
+ws.title = "Log"
+ws.append(["日時","カテゴリ","内容"])
+wb.save("logbool.xlsx")
+print("logbool.xlsx を新規作成しました")
