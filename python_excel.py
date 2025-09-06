@@ -9,15 +9,15 @@ for row in ws.iter_rows(min_row=1,max_row=1,values_only=True):
 
 #------3列目だけを全部取り出してリストにする
 messages = []
-for row in ws.iter_rows(min_row=2,values_only=True)
-    message.append(row[2])
+for row in ws.iter_rows(min_row=2,values_only=True):
+    messages.append(row[2])
 
 print(messages)
 
 #------空じゃないカテゴリだけ出力
-for row in ws.iterrows(min_row=2,values_only=True):
-    ifrow[1]:
-    print(row[1])
+for row in ws.iter_rows(min_row=2,values_only=True):
+    if row[1]:
+        print(row[1])
 
 #------カテゴリが"業務”の行だけ内容を表示
 for row in ws.iter_rows(min_row=2,values_only=True):
@@ -37,6 +37,6 @@ for row in ws.iter_rows(min_row=2,values_only=True):
 categories = set()
 for row in ws.iter_rows(min_row=2,values_only=True):
     if row[1]:
-        categories.aappend([row[1]])
+        categories.add([row[1]])
 
-len(categories)
+print(categories)

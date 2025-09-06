@@ -1,0 +1,22 @@
+==========サーバー状況報告========
+ 14:09:48 up 29 min,  1 user,  load average: 0.00, 0.02, 0.00
+Filesystem      Size  Used Avail Use% Mounted on
+none            7.6G     0  7.6G   0% /usr/lib/modules/6.6.87.2-microsoft-standard-WSL2
+none            7.6G  4.0K  7.6G   1% /mnt/wsl
+drivers         952G  255G  698G  27% /usr/lib/wsl/drivers
+/dev/sdd       1007G  2.1G  954G   1% /
+none            7.6G   80K  7.6G   1% /mnt/wslg
+none            7.6G     0  7.6G   0% /usr/lib/wsl/lib
+rootfs          7.6G  2.7M  7.5G   1% /init
+none            7.6G  548K  7.6G   1% /run
+none            7.6G     0  7.6G   0% /run/lock
+none            7.6G     0  7.6G   0% /run/shm
+none            7.6G  100K  7.6G   1% /mnt/wslg/versions.txt
+none            7.6G  100K  7.6G   1% /mnt/wslg/doc
+C:\             952G  255G  698G  27% /mnt/c
+D:\             1.9T  697G  1.2T  38% /mnt/d
+E:\             932G  232G  700G  25% /mnt/e
+tmpfs           7.6G   16K  7.6G   1% /run/user/1000
+               total        used        free      shared  buff/cache   available
+Mem:            15Gi       588Mi        14Gi       3.5Mi       179Mi        14Gi
+Swap:          4.0Gi          0B       4.0Gi
